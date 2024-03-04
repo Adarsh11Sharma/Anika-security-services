@@ -1,0 +1,55 @@
+{% extends '_base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Log out{% endblock %}
+
+{% block content %}
+<div class="content-wrapper">
+  <section class="wrapper image-wrapper bg-image bg-overlay bg-overlay-light-600 text-white" data-image-src="{% static 'assets/img/photos/bg18.png' %}">
+    <div class="container pt-17 pb-20 pt-md-19 pb-md-21 text-center">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h1 class="display-1 mb-3">Sign Out</h1>
+          <nav class="d-inline-block" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Sign Out</li>
+            </ol>
+          </nav>
+          <!-- /nav -->
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <section class="wrapper bg-light">
+    <div class="container pb-14 pb-md-16">
+      <div class="row">
+        <div class="col-lg-7 col-xl-6 col-xxl-5 mx-auto mt-n20">
+          <div class="card">
+            <div class="card-body p-11 text-center">
+              <h2 class="mb-3 text-start">Sign Out</h2>
+              <p class="text-start">Are you sure you want to sign out?</p>
+              <form method="post" action="{% url 'account_logout' %}">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-danger rounded-pill btn-login w-100 mb-2" type="submit">Sign Out</button>
+              </form>
+              <!-- /form -->
+            </div>
+            <!--/.card-body -->
+          </div>
+          <!--/.card -->
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  
+</div>
+{% endblock content %}
