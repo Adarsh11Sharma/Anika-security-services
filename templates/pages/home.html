@@ -6,6 +6,15 @@
 
 
 {% block content %}
+{% if message %}
+<div class="alert alert-{{ message.tags }} alert-icon alert-dismissible fade show" role="alert">
+  {{ message }}
+  {% if message.extra_tags %}
+    <a href="#" class="alert-link hover">{{ message.extra_tags }}</a>.
+  {% endif %}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
 <section class="wrapper bg-light">
   <div class="container">
    <div class="card bg-soft-primary rounded-4 mt-2 mb-13 mb-md-17">

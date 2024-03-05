@@ -10,7 +10,8 @@ SECRET_KEY = "django-insecure-0peo@#x9jur3!h$ryje!$879xww8y1y66jx!%*#ymhg&jkozs2
 DEBUG = True
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1" , "b647-49-43-25-165.ngrok-free.app"]
+
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = [
@@ -152,7 +153,7 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 # django-debug-toolbar
 # https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
 # https://docs.djangoproject.com/en/dev/ref/settings/#internal-ips
-INTERNAL_IPS = ["127.0.0.1"]
+INTERNAL_IPS = ["127.0.0.1" , "b647-49-43-25-165.ngrok-free.app"]
 
 # https://docs.djangoproject.com/en/dev/topics/auth/customizing/#substituting-a-custom-user-model
 AUTH_USER_MODEL = "accounts.CustomUser"
